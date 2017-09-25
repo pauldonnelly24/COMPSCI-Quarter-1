@@ -7,15 +7,14 @@ package Quarter1;
 import java.util.Scanner;
 /**
  *
- * @author Owner
+ * @author PJD
  */
 public class Notebooks2 {
     public static void main(String[] args){
     Scanner in = new Scanner(System.in);
     double notebooks, notebookprice, pricewithtax, total;
-    String career;
     
-    System.out.println("Enter your career here.");
+    System.out.println("Enter your career.");
     in.nextLine();
     System.out.println("Enter the number of notebooks purchased here.");
     notebooks = in.nextDouble();
