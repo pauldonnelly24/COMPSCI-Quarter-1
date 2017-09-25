@@ -7,7 +7,7 @@ package Quarter1;
 import java.util.Scanner;
 /**
  *
- * @author Owner
+ * @author PJD
  */
 public class CoinSum {
     
