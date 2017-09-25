@@ -7,7 +7,7 @@ package Quarter1;
 import java.util.Scanner;
 /**
  *
- * @author Owner
+ * @author PJJJ
  */
 public class DecimaltoBinary {
 public static void main(String[] args){
