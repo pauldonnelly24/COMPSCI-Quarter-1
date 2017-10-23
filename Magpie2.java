@@ -1,5 +1,3 @@
-package Src;
-
 /**
  * A program to carry on conversations with a human user.
  * This is the initial version that:  
@@ -12,8 +10,7 @@ package Src;
  * @author Laurie White
  * @version April 2012
  */
-import java.util.Scanner;
-public class Magpie
+public class Magpie2
 {
 	/**
 	 * Get a default greeting 	
@@ -42,9 +39,35 @@ public class Magpie
 				|| statement.indexOf("father") >= 0
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0)
+                                
 		{
 			response = "Tell me more about your family.";
 		}
+                else if (statement.indexOf("dog") >= 0
+                                || statement.indexOf("cat") >= 0)
+                {
+                        response = "Tell me more about your pets.";
+                }
+                else if (statement.indexOf("Trump") >= 0
+                                || statement.indexOf("president") >= 0)
+                {
+                            response = "That boi bad and boujee";
+                }
+                else if (statement.indexOf("poop") >= 0
+                                || statement.indexOf("pee") >= 0
+                                || statement.indexOf("bathroom") >= 0)
+                {
+                    response = "I need to go potty.";
+                }
+                else if (statement.indexOf("computer") >= 0
+                                || statement.indexOf("science") >= 0)
+                {
+                    response = "Get that @#$% outta here.";
+                }
+                else if (statement.indexOf("Mr. Hoang") >= 0)
+                {
+                    response = "He sounds like a solid Vietnamese gentlemen.";                
+                }
 		else
 		{
 			response = getRandomResponse();
@@ -58,7 +81,7 @@ public class Magpie
 	 */
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 4;
+		final int NUMBER_OF_RESPONSES = 6;
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
@@ -82,31 +105,4 @@ public class Magpie
 
 		return response;
 	}
-
-
-
-
-/**
- * A simple class to run the Magpie class.
- * @author Laurie White
- * @version April 2012
- */
-	/**
-	 * Create a Magpie, give it user input, and print its replies.
-	 */
-	public static void main(String[] args)
-	{
-		Magpie maggie = new Magpie();
-		
-		System.out.println (maggie.getGreeting());
-		Scanner in = new Scanner (System.in);
-		String statement = in.nextLine();
-		
-		while (!statement.equals("Bye"))
-		{
-			System.out.println (maggie.getResponse(statement));
-			statement = in.nextLine();
-		}
-	}
 }
-
